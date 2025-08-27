@@ -7,3 +7,12 @@ services:
     autoDeploy: true
     buildCommand: "pip install -r requirements.txt"
     startCommand: "gunicorn -w 1 -b 0.0.0.0:$PORT server:app"
+    envVars:
+      - key: INGEST_TOKEN
+        sync: false
+      - key: PP_EMAIL
+        sync: false
+      - key: PP_PASS
+        sync: false
+      - key: PP_URL
+        sync: false
